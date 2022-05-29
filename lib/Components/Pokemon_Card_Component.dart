@@ -12,7 +12,7 @@ class PokemonCardComponent extends StatelessWidget {
       children: [
         Container(
           width: MediaQuery.of(context).size.width,
-          height: 600,
+          height: 580,
           margin: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),

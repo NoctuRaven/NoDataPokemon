@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nodatapokemon/Components/Pokemon_Card_Component.dart';
-import 'package:nodatapokemon/Components/Pokemon_GridView_Component.dart';
-import '../Data/Pokemon_Data.dart';
 import '../Models/Pokemon_Models.dart';
 
 class PokemonPage extends StatefulWidget {
-  Pokemon? _pokemon = pokemonList[0];
+  Pokemon? _pokemon;
 
   @override
   State<PokemonPage> createState() => _PokemonPageState();
@@ -14,15 +12,15 @@ class PokemonPage extends StatefulWidget {
 class _PokemonPageState extends State<PokemonPage> {
   @override
   Widget build(BuildContext context) {
+    widget._pokemon = ModalRoute.of(context)!.settings.arguments as Pokemon;
     return Scaffold(
+      appBar: AppBar(),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         color: Colors.grey[400],
         child: SingleChildScrollView(
-          child: Column(
-            children: [PokemonCardComponent(widget._pokemon!), PokemonGridView(selectPokemonList)],
-          ),
+          child: PokemonCardComponent(widget._pokemon!),
         ),
       ),
     );

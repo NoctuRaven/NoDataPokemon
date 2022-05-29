@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
 import '../Models/Pokemon_Models.dart';
+import '../utils/app_routes.dart';
 
 class PokemonItemList extends StatelessWidget {
   final Pokemon _pokemon;
-  final Function(Pokemon) selectPokemon;
-
-  PokemonItemList(this._pokemon, this.selectPokemon);
+  PokemonItemList(this._pokemon);
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => selectPokemon(_pokemon),
-      borderRadius: BorderRadius.circular(15),
-      child: Container(
-        height: 30,
-        width: 150,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: _pokemon.cor,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: GridTile(
+        child: Container(
+          decoration: BoxDecoration(color: _pokemon.cor),
+          child: GestureDetector(
+            onTap: () => Navigator.of(context).pushNamed(Routes.pokemonCard, arguments: _pokemon),
+            child: Image.asset(_pokemon.imagem.toString(), fit: BoxFit.cover),
+          ),
         ),
-        child: Center(
-          child: Text(
+        footer: GridTileBar(
+          backgroundColor: Colors.black38,
+          title: Text(
             _pokemon.nome.toString(),
-            style: const TextStyle(fontSize: 15),
+          ),
+          trailing: Text(
+            '#${_pokemon.id.toString()}',
+            style: const TextStyle(color: Color.fromARGB(255, 196, 196, 196)),
           ),
         ),
       ),
