@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # nodatapokemon
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# New_project001
+>>>>>>> 4f263c17b15c42d5c1960a9e1bdae58f3274c723
