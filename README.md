@@ -1,20 +1,6 @@
 <<<<<<< HEAD
 # nodatapokemon
 
-A new Flutter project.
+[Layout](https://github.com/NoctuRaven/NoDataPokemon/blob/main/lib/assets/images/pekemon.png)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# New_project001
->>>>>>> 4f263c17b15c42d5c1960a9e1bdae58f3274c723
+## Layout test
